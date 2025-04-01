@@ -11,7 +11,8 @@ link_BD = os.getenv("DATABASE_URL")
 app.config["SQLALCHEMY_DATABASE_URI"] = link_BD
 
 app.config["SECRET_KEY"] = "dd6c6aecba9edab6274cb50e47bcdf26"
-app.config["UPLOAD_FOLDER"] = "static/fotos_posts"
+# app.config["UPLOAD_FOLDER"] = "static/fotos_posts"
+app.config["UPLOAD_FOLDER"] = "/fotos_posts"
 
 database = SQLAlchemy(app)
 bcrypt = Bcrypt(app)
