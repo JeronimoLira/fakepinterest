@@ -33,7 +33,7 @@ def criar_conta():
     return render_template("criarconta.html", form=form_criarconta)
 
 
-@app.route("/uploadas/<PATH: filename>")
+@app.route("/uploads/<path: filename>")
 @login_required
 def custom_static(filename):
     return  send_from_directory(app.config["UPLOAD_FOLDER"], filename, as_attachment=True)
